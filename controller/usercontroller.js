@@ -8,6 +8,10 @@ class UserController {
         return UserController._users
     }
 
+    static set users(value) {
+        UserController._users = value;
+    }
+    
     static getUser(userID) {
         const user = UserController.users.find(user => Number(user.userID) === Number(userID))
 
@@ -137,7 +141,7 @@ class UserController {
      */
     static async addChat(userID, chatID) {
         const user = this.getUser(userID)
-        
+
         if (!user.chats.includes(chatID)) {
             user.chats.push(Number(chatID))
         }

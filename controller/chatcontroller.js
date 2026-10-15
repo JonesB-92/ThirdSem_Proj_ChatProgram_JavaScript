@@ -11,6 +11,10 @@ class ChatController {
         return ChatController._chats
     }
 
+    static set chats(value) {
+        ChatController._chats = value;
+    }
+
     static getChat(chatID) {
         const chat = ChatController.chats.find(c => Number(c.chatID) === Number(chatID))
 
@@ -90,7 +94,7 @@ class ChatController {
      */
     static async deleteMessage(chatID, messageID) {
         const chat = this.getChat(Number(chatID))
-        
+
         if (chat) {
             // 1. Find index using the ID
             const index = chat.messages.findIndex(m => Number(m.messageID) === Number(messageID));

@@ -41,11 +41,6 @@ const initializeSystem = async () => {
 await initializeSystem();
 
 
-// Middleware
-
-
-// Routes
-
 // Main page
 app.get('/', (req, res) => {
     res.render('login')
@@ -109,8 +104,8 @@ app.post('/writeMessage', async (req, res) => {
 })
 
 app.post('/createChat', async (req, res) => {
-    const userID = req.session.userID; // 🔒 Get ID safely from the session
-    const { chatName } = req.body;     // 📝 Get the name from the form
+    const userID = req.session.userID; // Get ID safely from the session
+    const { chatName } = req.body;     // Get the name from the form
     
     // const { user: userID, chatName} = req.body
     const user = UserController.getUser(userID)
