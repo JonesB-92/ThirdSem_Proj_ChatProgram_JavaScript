@@ -1,0 +1,66 @@
+[
+  {
+    "name": "MyChat",
+    "ownerID": 1,
+    "members": [
+      1
+    ],
+    "messages": [
+      {
+        "messageID": 1,
+        "text": "test",
+        "timeCreated": "2026-04-09T10:15:45.474Z",
+        "userID": 1,
+        "chatID": 1
+      }
+    ],
+    "timeCreated": "2026-04-09T10:15:32.147Z",
+    "chatID": 1
+  },
+  {
+    "name": "test",
+    "ownerID": "1",
+    "members": [
+      "1"
+    ],
+    "messages": [
+      {
+        "messageID": 2,
+        "text": "hej",
+        "timeCreated": "2026-04-09T10:17:31.333Z",
+        "userID": 1,
+        "chatID": 2
+      }
+    ],
+    "timeCreated": "2026-04-09T10:15:49.709Z",
+    "chatID": 2
+  },
+  {
+    "name": "test2",
+    "ownerID": "1",
+    "members": [
+      "1"
+    ],
+    "messages": [
+      {
+        "messageID": 1,
+        "text": "Hello",
+        "timeCreated": "2026-04-09T10:17:54.797Z",
+        "userID": 1,
+        "chatID": 3
+      }
+    ],
+    "timeCreated": "2026-04-09T10:17:51.337Z",
+    "chatID": 3
+  },
+  {
+    "name": "test",
+    "ownerID": "1",
+    "members": [
+      "1"
+    ],
+    "messages": [],
+    "timeCreated": "2026-04-09T10:39:44.055Z",
+    "chatID": 4
+  }
+]

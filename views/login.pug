@@ -1,0 +1,9 @@
+html
+    head
+        title Velkommen 
+    body
+        h1 Her kan du logge ind
+        form(action="/login", method="post")
+                input(type="text", name="username", placeholder="brugernavn")
+                input(type="password", name="password", placeholder="kodeord")
+                button(type="submit") Login 

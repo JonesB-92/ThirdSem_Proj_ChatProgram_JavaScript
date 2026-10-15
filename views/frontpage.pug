@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title Welcome
+    link(rel="stylesheet" href="/css/styles.css")
+  body
+    div.container
+      // Left Sidebar: Members
+      div.members-sidebar
+        div.sidebar-header
+          h3 Members
+        ul.member-list
+          if chat && chat.members
+            each memberID in chat.members
+              li
+                span.status-indicator
+                | User ##{memberID}
+          else
+            li No members found
+
+      // Main chat area
+      div.main-chat-area
+        div.header
+          h2 #{chat ? chat.name : 'Select a Chat'}
+          small Logged in as #{username}
+
+        div#message-box
+          if chat && chat.messages
+            each msg in chat.messages
+              div(class=`message ${msg.userID === id ? 'own' : ''}`)
+                div.message-meta User ##{msg.userID} - #{new Date(msg.timeCreated).toLocaleString('da-DK', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' })}
+                div.text #{msg.text}
+          else
+            p(style="text-align: center; color: #888; margin-top: 20px;") No messages yet. Start the conversation!
+
+        div.input-area
+          form(action="/writeMessage" method="post") 
+            input(type="hidden" name="user", value=id)
+            input(type="text" name="content" placeholder="Type a message...", required, autofocus)
+            button(type="submit") Send
+
+      // Right Sidebar: Chat List
+      div.chat-sidebar
+        div.sidebar-header
+          h3 Dine chats
+          form(action="/createChat" method="post" class="new-chat-form")
+            input(type="hidden" name="user", value=id)
+            input(type="text" name="chatName" placeholder="Ny chat navn...", required)
+            button(type="submit" class="new-chat-button") +
+
+        ul.chat-list
+          if chats && chats.length
+            each c in chats
+              li
+                a(class=`${chat && chat.chatID === c.chatID ? 'active' : ''}`, href=`/switchChat?chatID=${c.chatID}`) #{c.name}
+          else
+            li(style="color: #888; font-size: 0.9em; padding: 10px;") Ingen chats endnu.
+
+    script.
+      // Auto-scroll to bottom on load
+      const box = document.getElementById('message-box');
+      if (box) {
+          box.scrollTop = box.scrollHeight;
+      }

@@ -1,0 +1,39 @@
+[
+  {
+    "userID": 1,
+    "username": "123",
+    "password": "123",
+    "dateCreated": "2026-04-09T10:15:32.143Z",
+    "messages": [
+      {
+        "messageID": 1,
+        "text": "test",
+        "timeCreated": "2026-04-09T10:15:45.474Z",
+        "userID": 1,
+        "chatID": 1
+      },
+      {
+        "messageID": 2,
+        "text": "hej",
+        "timeCreated": "2026-04-09T10:17:31.333Z",
+        "userID": 1,
+        "chatID": 2
+      },
+      {
+        "messageID": 1,
+        "text": "Hello",
+        "timeCreated": "2026-04-09T10:17:54.797Z",
+        "userID": 1,
+        "chatID": 3
+      }
+    ],
+    "chats": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "currentChatID": 1,
+    "isGM": false
+  }
+]

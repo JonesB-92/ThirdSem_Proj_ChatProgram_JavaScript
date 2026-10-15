@@ -1,0 +1,26 @@
+{
+  "name": "chatproject",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MrJones2k4/ChatProject#readme",
+  "bugs": {
+    "url": "https://github.com/MrJones2k4/ChatProject/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrJones2k4/ChatProject.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "fs": "^0.0.1-security",
+    "pug": "^3.0.4"
+  }
+}

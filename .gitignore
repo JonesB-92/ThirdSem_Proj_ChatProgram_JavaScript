@@ -1,0 +1,24 @@
+# Dependency directories (Preserves bandwidth)
+node_modules/
+jspm_packages/
+
+# Private Environment & Session Keys (Security risk)
+.env
+.env.local
+.env.*.local
+*.env
+config/jwt.txt
+config/session.secret
+
+# IDE Configuration (Private local layouts)
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+Thumbs.db
+.DS_Store
